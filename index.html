@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dev Tours & Travels - Uttarakhand</title>
+    <style>
+   
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #ff8800;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            margin: 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 1000px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        
+        .mySlides {
+            display: none;
+        }
+
+        .mySlides img {
+            width: 100%;
+            border-radius: 10px;
+        }
+/* Fading animation */
+        .fade {
+            animation: fadeEffect 1.5s;
+        }
+
+        @keyframes fadeEffect {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+        .text {
+            color: #fff;
+            font-size: 20px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+.next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .info {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            margin: 30px auto;
+            width: 90%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .info p {
+            font-size: 16px;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Welcome to Dev Tours & Travels</h1>
+        <p>Your Ultimate Travel Partner to Explore Uttarakhand</p>
+    </header>
+
+    <section class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcSWGir3Jg_7t1qPKcW3gsXyYgj40xgwCwgAbAXloKmKSsxA5R1oqncXaEXIPhrNGJ3Vh7x5IZqITHz-FrG20tr4GrLrRyHXu__TY_dm-w" alt="Nainital">
+            <div class="text">Explore the Beauty of Nainital</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="https://lh5.googleusercontent.com/p/AF1QipPtNd5h7hLv81oKG-nDfQe0AOKAI4SCf1CT7h8P=w1080-h624-n-k-no" alt="Rishikesh">
+            <div class="text">Adventures in Rishikesh</div>
+        </div>
+<div class="mySlides fade">
+            <img src="https://lh5.googleusercontent.com/p/AF1QipM_5jTEkhVD6Ogr2_uB_FMNZ2Zeo0PpB8qR73VT=w1080-h624-n-k-no" alt="Auli">
+            <div class="text">Breathtaking Views of Auli</div>
+        </div>
+
+        <!-- Next/prev buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </section>
+
+    <!-- Information Section -->
+    <section class="info">
+        <h2>Why Choose Us?</h2>
+        <p>At Dev Tours & Travels, we offer personalized tour packages, expert guides, and unforgettable experiences in Uttarakhand. Whether it's serene nature walks, thrilling adventures, or peaceful retreats, we have something for everyone.</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Dev Tours & Travels Solutions | All rights reserved.</p>
+    </footer>
+<script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        function plusSlides(n) {
+            showSlidesManual(slideIndex += n);
+        }
+function showSlidesManual(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+    </script>
+</body>
+</html>
+
